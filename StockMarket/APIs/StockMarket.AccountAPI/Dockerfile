@@ -11,7 +11,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
 WORKDIR /src
 COPY ["StockMarket.AccountAPI.csproj", ""]
-RUN dotnet restore "./StockMarket.AccountAPI.csproj"
+RUN dotnet restore "./StockMarket.AccountAPI.csproj"#ccccccccccccc
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "StockMarket.AccountAPI.csproj" -c Release -o /app/build
